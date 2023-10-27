@@ -81,6 +81,15 @@ public class SectionObject {
 	public void setSection_language(byte section_language) {
 		this.section_language = section_language;
 	}
+	@Override
+	public String toString() {
+		return "SectionObject [section_id=" + section_id + ", section_name=" + section_name + ", section_notes="
+				+ section_notes + ", section_created_date=" + section_created_date + ", section_manager_id="
+				+ section_manager_id + ", section_enable=" + section_enable + ", section_delete=" + section_delete
+				+ ", section_last_modified=" + section_last_modified + ", section_created_author_id="
+				+ section_created_author_id + ", section_name_en=" + section_name_en + ", section_language="
+				+ section_language + "]";
+	}
 	
 	
 }
