@@ -19,7 +19,7 @@ public class ConnectionPoolImpl implements ConnectionPool {
 	
 	public ConnectionPoolImpl() {
 		//Xác định trình điều khiển
-		this.driver = "com.mysql.cj.Driver";
+		this.driver = "com.mysql.cj.jdbc.Driver";
 		
 		//nạp trình điều khiển
 		try {
