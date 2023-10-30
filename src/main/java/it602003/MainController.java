@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import it602003.objects.CategoryObject;
 import it602003.objects.SectionObject;
 import it602003.process.Category;
-import it602003.process.Section;
+import it602003.process.processImpl.CategoryImpl;
+import it602003.process.processImpl.SectionImpl;
 
 public class MainController {
 	
@@ -12,7 +13,7 @@ public class MainController {
 	
 	public static void main(String[] args) {
 		//tạo đối tượng làm việc với section
-		Section s = new Section();
+		SectionImpl s = new SectionImpl();
 		
 		//Tạo đối tượng chuyên mục mới
 		SectionObject nsec = new SectionObject();
@@ -26,6 +27,7 @@ public class MainController {
 		
 		//Lấy danh sách đối tượng
 		ArrayList<SectionObject> itemsArrayList = s.getSectionObjects(null, (byte) 20);
+
 		
 		//in ra màn hình
 
@@ -33,11 +35,25 @@ public class MainController {
 //			System.out.println(item);
 //		});
 		
-		Category cat = new Category();
-		ArrayList<CategoryObject> catList = cat.getSectionObjects(null, (byte) 20);
+		Category cat = new CategoryImpl();
 		
-		catList.forEach(item ->{
-			System.out.println(item);
-		});
+		CategoryObject catObj = new CategoryObject();
+		catObj.setCategory_name("hehehehe");
+		catObj.setCategory_created_date("29/10/23");
+//		cat.addCategory(catObj);
+		
+//		ArrayList<CategoryObject> catList = cat.getCategoryObjectByName("");
+////		
+//		catList.forEach(item ->{
+//			System.out.println(item);
+//		});
+		
+		CategoryObject catO = cat.getCategoryObjectById(23);
+		System.out.println(catO);
+		
+//		System.err.println(cat.deleteCategory(52));
+//		catO.setCategory_created_author_id(20);
+//		cat.updateCategoryObject(catO);
+		
 	}
 }
