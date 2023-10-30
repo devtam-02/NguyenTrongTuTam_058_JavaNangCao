@@ -115,13 +115,13 @@ public class CategoryObject {
 
 	@Override
 	public String toString() {
-		return "CategoryObject [category_id=" + category_id + ", category_name=" + category_name
-				+ ", category_section_id=" + category_section_id + ", category_notes=" + category_notes
-				+ ", category_created_date=" + category_created_date + ", category_created_author_id="
-				+ category_created_author_id + ", category_last_modified=" + category_last_modified
-				+ ", category_manager_id=" + category_manager_id + ", category_enable=" + category_enable
-				+ ", category_delete=" + category_delete + ", category_image=" + category_image + ", category_name_en="
-				+ category_name_en + ", category_language=" + category_language + "]";
+		return "CategoryObject [category_id=|" + category_id + "|, category_name=|" + category_name
+				+ "|, category_section_id=|" + category_section_id + "|, category_notes=|" + category_notes
+				+ "|, category_created_date=|" + category_created_date + "|, category_created_author_id=|"
+				+ category_created_author_id + "|, category_last_modified=|" + category_last_modified
+				+ "|, category_manager_id=|" + category_manager_id + "|, category_enable=|" + category_enable
+				+ "|, category_delete=|" + category_delete + "|, category_image=|" + category_image + "|, category_name_en=|"
+				+ category_name_en + "|, category_language=|" + category_language + "]";
 	}
 	
 	
