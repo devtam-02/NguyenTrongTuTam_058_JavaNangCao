@@ -8,49 +8,31 @@ import it602003.process.processImpl.CategoryImpl;
 import it602003.process.processImpl.SectionImpl;
 
 public class MainController {
-	
-	
+	//Tạo đối tượng làm việc với category
+	private static Category cat;
 	
 	public static void main(String[] args) {
-		//tạo đối tượng làm việc với section
-		SectionImpl s = new SectionImpl();
+		//Khai báo đối tượng làm việc với category
+		cat = new CategoryImpl();
 		
-		//Tạo đối tượng chuyên mục mới
-		SectionObject nsec = new SectionObject();
-		nsec.setSection_name("Lap trinh java Lâng Kao");
-		nsec.setSection_created_date("27/10/23");
-		nsec.setSection_created_author_id(20);
-		
-//		if(!s.addSection(nsec)) {
-//			System.out.println("----KHÔNG THÀNH CÔNG----");
-//		}
-		
-		//Lấy danh sách đối tượng
-		ArrayList<SectionObject> itemsArrayList = s.getSectionObjects(null, (byte) 20);
-
-		
-		//in ra màn hình
-
-//		itemsArrayList.forEach(item -> {
-//			System.out.println(item);
-//		});
-		
-		Category cat = new CategoryImpl();
-		
+		//Tạo đối tượng category mới
 		CategoryObject catObj = new CategoryObject();
 		catObj.setCategory_name("hehehehe");
 		catObj.setCategory_created_date("29/10/23");
-//		cat.addCategory(catObj);
+		cat.addCategory(catObj);
 		
+		//Lấy danh sách đối tượng
 //		ArrayList<CategoryObject> catList = cat.getCategoryObjectByName("");
 ////		
 //		catList.forEach(item ->{
 //			System.out.println(item);
 //		});
 		
-		CategoryObject catO = cat.getCategoryObjectById(23);
-		System.out.println(catO);
+		//Lấy ra một đối tượng bằng id
+//		CategoryObject catO = cat.getCategoryObjectById(23);
+//		System.out.println(catO);
 		
+		//Xóa đối tượng
 //		System.err.println(cat.deleteCategory(52));
 //		catO.setCategory_created_author_id(20);
 //		cat.updateCategoryObject(catO);

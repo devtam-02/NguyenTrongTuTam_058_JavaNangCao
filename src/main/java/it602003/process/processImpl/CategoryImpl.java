@@ -115,7 +115,6 @@ public class CategoryImpl implements Category{
 					item.setCategory_image(rs.getString("category_image"));
 					item.setCategory_name_en(rs.getString("category_name_en"));
 					item.setCategory_language(rs.getByte("category_language"));
-					
 					items.add(item);
 				}
 			}
@@ -271,5 +270,51 @@ public class CategoryImpl implements Category{
 			e.printStackTrace();
 		}
 		return false;
+	}
+	@Override
+	public ArrayList<CategoryObject> getCategoryObjects() {
+		ArrayList<CategoryObject> items = new ArrayList<>();
+		CategoryObject item;
+		
+		String sql = "SELECT * FROM tblcategory ";
+		sql += "";
+		sql += "ORDER BY category_name ASC ";
+		try {
+			PreparedStatement pre = this.con.prepareStatement(sql);		
+			ResultSet rs = pre.executeQuery(); //Lấy về tập kết quả
+			if(rs != null) {
+				while(rs.next()) {
+					item = new CategoryObject();
+					item.setCategory_id((rs.getShort("category_id")));
+					item.setCategory_name(rs.getString("category_name"));
+					item.setCategory_section_id(rs.getShort("category_section_id"));
+					item.setCategory_notes(rs.getString("category_notes"));
+					item.setCategory_created_date(rs.getString("category_created_date"));
+					item.setCategory_created_author_id(rs.getInt("category_created_author_id"));
+					item.setCategory_last_modified(rs.getString("category_last_modified"));
+					item.setCategory_manager_id(rs.getInt("category_manager_id"));
+					item.setCategory_enable(rs.getBoolean("category_enable"));
+					item.setCategory_delete(rs.getBoolean("category_delete"));
+					item.setCategory_image(rs.getString("category_image"));
+					item.setCategory_name_en(rs.getString("category_name_en"));
+					item.setCategory_language(rs.getByte("category_language"));
+					
+					items.add(item);
+				}
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+			//trở về trạng thái an toàn của kết nối
+			try {
+				this.con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
+		return items;
 	}
 }

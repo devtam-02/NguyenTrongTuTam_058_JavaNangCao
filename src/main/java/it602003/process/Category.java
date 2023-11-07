@@ -16,6 +16,8 @@ public interface Category {
 	
 	public ArrayList<CategoryObject> getCategoryObjects(byte total);
 	
+	public ArrayList<CategoryObject> getCategoryObjects();
+	
 	public ArrayList<CategoryObject> getCategoryObjectByName(String name);
 
 }
