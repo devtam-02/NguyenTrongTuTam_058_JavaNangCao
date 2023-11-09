@@ -38,7 +38,7 @@ public class SectionImpl implements Section{
 		
 		String sql = "SELECT * FROM tblsection ";
 		sql += "";
-		sql += "ORDER BY section_name ASC ";
+		sql += "ORDER BY section_created_date DESC ";
 		sql += "LIMIT ?";
 		
 		//Biên dịch
