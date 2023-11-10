@@ -91,7 +91,7 @@ public class CategoryImpl implements Category{
 		CategoryObject item;
 		
 		String sql = "SELECT * FROM tblcategory ";
-		sql += "WHERE category_name LIKE ? ";
+		sql += "WHERE category_name LIKE ? and category_delete=0 ";
 		sql += "ORDER BY category_name ASC";
 		
 		try {
@@ -252,8 +252,8 @@ public class CategoryImpl implements Category{
 	@Override
 	public boolean deleteCategory(int id) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("DELETE FROM tblcategory WHERE category_id = ?;");
-		
+//		sql.append("DELETE FROM tblcategory WHERE category_id = ?;");
+		sql.append("UPDATE tblcategory SET category_delete = 1 WHERE category_id = ?;");
 		try {
 			PreparedStatement pre = this.con.prepareStatement(sql.toString());
 			pre.setShort(1, (short) id);
@@ -276,7 +276,7 @@ public class CategoryImpl implements Category{
 		ArrayList<CategoryObject> items = new ArrayList<>();
 		CategoryObject item;
 		
-		String sql = "SELECT * FROM tblcategory ";
+		String sql = "SELECT * FROM tblcategory WHERE category_delete=0 ";
 		sql += "";
 		sql += "ORDER BY category_name ASC ";
 		try {
