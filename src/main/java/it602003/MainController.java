@@ -31,11 +31,11 @@ public class MainController {
 		cat.addCategory(catObj);
 		
 		//Lấy danh sách đối tượng
-//		ArrayList<CategoryObject> catList = cat.getCategoryObjectByName("");
-////		
-//		catList.forEach(item ->{
-//			System.out.println(item);
-//		});
+		ArrayList<CategoryObject> catList = cat.getCategoryObjectByName("");
+//		
+		catList.forEach(item ->{
+			System.out.println(item);
+		});
 		
 		//Lấy ra một đối tượng bằng id
 //		CategoryObject catO = cat.getCategoryObjectById(23);

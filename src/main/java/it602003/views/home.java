@@ -247,8 +247,8 @@ public class home {
 		panelEdit.setBackground(new Color(146, 185, 227));
 		panelEdit.setBorder(null);
 		
-		tabbedPane.addTab("Edit category", null, panelEdit, null);
-		tabbedPane.setBackgroundAt(1, new Color(146, 185, 227));
+//		tabbedPane.addTab("Edit category", null, panelEdit, null);
+//		tabbedPane.setBackgroundAt(1, new Color(146, 185, 227));
 		panelEdit.setLayout(null);
 		
 		JLabel lblEditTitle = new JLabel("EDIT CATEGORY");
@@ -264,18 +264,19 @@ public class home {
 			public void actionPerformed(ActionEvent e) {
 				tabbedPane.remove(panelEdit);
 				tabbedPane.setSelectedComponent(panelList);
+				tabbedPane.setEnabledAt(0, true);
 			}
 		});
 		btnCancel_Edit.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnCancel_Edit.setBorder(null);
 		btnCancel_Edit.setBackground(new Color(255, 255, 128));
-		btnCancel_Edit.setBounds(411, 622, 99, 29);
+		btnCancel_Edit.setBounds(458, 622, 99, 29);
 		panelEdit.add(btnCancel_Edit);
 		
 		JButton btnSave = new JButton("Save");
 		
 		btnSave.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnSave.setBounds(547, 622, 99, 29);
+		btnSave.setBounds(615, 622, 99, 29);
 		panelEdit.add(btnSave);
 		
 		JPanel panelChildAdd_1 = new JPanel();
@@ -289,7 +290,7 @@ public class home {
 		lblAddName_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddName_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddName_1.setBackground(new Color(164, 195, 162));
-		lblAddName_1.setBounds(48, 25, 61, 25);
+		lblAddName_1.setBounds(311, 24, 112, 25);
 		panelChildAdd_1.add(lblAddName_1);
 		
 		JLabel lblAddSection_1 = new JLabel("Section");
@@ -297,7 +298,7 @@ public class home {
 		lblAddSection_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddSection_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddSection_1.setBackground(new Color(164, 195, 162));
-		lblAddSection_1.setBounds(48, 74, 112, 25);
+		lblAddSection_1.setBounds(311, 73, 112, 25);
 		panelChildAdd_1.add(lblAddSection_1);
 		
 		JLabel lblAddNotes_1 = new JLabel("Notes");
@@ -305,11 +306,11 @@ public class home {
 		lblAddNotes_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddNotes_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddNotes_1.setBackground(new Color(164, 195, 162));
-		lblAddNotes_1.setBounds(48, 121, 61, 25);
+		lblAddNotes_1.setBounds(311, 120, 112, 25);
 		panelChildAdd_1.add(lblAddNotes_1);
 		
 		cbSectionSelect_edit = new JComboBox();
-		cbSectionSelect_edit.setBounds(171, 73, 204, 25);
+		cbSectionSelect_edit.setBounds(452, 73, 404, 25);
 		panelChildAdd_1.add(cbSectionSelect_edit);
 		
 		JLabel lblAddAuthor_1 = new JLabel("Author");
@@ -317,7 +318,7 @@ public class home {
 		lblAddAuthor_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddAuthor_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddAuthor_1.setBackground(new Color(164, 195, 162));
-		lblAddAuthor_1.setBounds(48, 252, 112, 25);
+		lblAddAuthor_1.setBounds(311, 251, 112, 25);
 		panelChildAdd_1.add(lblAddAuthor_1);
 		
 		JLabel lblAddManager_1 = new JLabel("Manager");
@@ -325,11 +326,11 @@ public class home {
 		lblAddManager_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddManager_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddManager_1.setBackground(new Color(164, 195, 162));
-		lblAddManager_1.setBounds(48, 312, 112, 25);
+		lblAddManager_1.setBounds(311, 311, 112, 25);
 		panelChildAdd_1.add(lblAddManager_1);
 		
 		cbManagerSelect_edit = new JComboBox();
-		cbManagerSelect_edit.setBounds(171, 315, 204, 25);
+		cbManagerSelect_edit.setBounds(452, 311, 404, 25);
 		panelChildAdd_1.add(cbManagerSelect_edit);
 		
 		JLabel lblEnglishName_1 = new JLabel("English name");
@@ -337,13 +338,13 @@ public class home {
 		lblEnglishName_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnglishName_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblEnglishName_1.setBackground(new Color(164, 195, 162));
-		lblEnglishName_1.setBounds(48, 374, 112, 25);
+		lblEnglishName_1.setBounds(311, 373, 112, 25);
 		panelChildAdd_1.add(lblEnglishName_1);
 		
 		txtName_en_edit = new JTextField();
 		txtName_en_edit.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtName_en_edit.setColumns(10);
-		txtName_en_edit.setBounds(191, 374, 237, 25);
+		txtName_en_edit.setBounds(452, 373, 404, 25);
 		panelChildAdd_1.add(txtName_en_edit);
 		
 		JLabel lblAddLanguage_1 = new JLabel("Language");
@@ -351,36 +352,36 @@ public class home {
 		lblAddLanguage_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddLanguage_1.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddLanguage_1.setBackground(new Color(164, 195, 162));
-		lblAddLanguage_1.setBounds(48, 423, 112, 25);
+		lblAddLanguage_1.setBounds(311, 422, 112, 25);
 		panelChildAdd_1.add(lblAddLanguage_1);
 		
 		cbLanguageSelect_edit = new JComboBox();
-		cbLanguageSelect_edit.setBounds(191, 426, 204, 25);
+		cbLanguageSelect_edit.setBounds(452, 422, 404, 25);
 		panelChildAdd_1.add(cbLanguageSelect_edit);
 		
 		txtName_Edit = new JTextPane();
 		txtName_Edit.setContentType("text/html");
 		txtName_Edit.setFont(new Font("Tahoma", Font.BOLD, 14));
-		txtName_Edit.setBounds(119, 25, 237, 25);
+		txtName_Edit.setBounds(452, 24, 404, 25);
 		panelChildAdd_1.add(txtName_Edit);
 		
 		txtNote_edit = new JTextPane();
 		txtNote_edit.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtNote_edit.setContentType("text/html");
-		txtNote_edit.setBounds(119, 121, 440, 94);
+		txtNote_edit.setBounds(452, 120, 404, 120);
 		panelChildAdd_1.add(txtNote_edit);
 		
 		lblAuthorName = new JLabel("");
 		lblAuthorName.setBackground(Color.WHITE);
 		lblAuthorName.setOpaque(true);
-		lblAuthorName.setBounds(170, 252, 270, 25);
+		lblAuthorName.setBounds(452, 251, 404, 25);
 		panelChildAdd_1.add(lblAuthorName);
 		
 		panelAdd = new JPanel();
 		panelAdd.setBackground(new Color(146, 185, 227));
 		panelAdd.setBorder(null);
 		panelAdd.setForeground(Color.BLACK);
-		tabbedPane.addTab("Add new category", null, panelAdd, null);
+//		tabbedPane.addTab("Add new category", null, panelAdd, null);
 		panelAdd.setLayout(null);
 		
 		JLabel lblAddTitle = new JLabel("ADD CATEGORY");
@@ -399,13 +400,13 @@ public class home {
 		
 		txtName = new JTextField();
 		txtName.setFont(new Font("Tahoma", Font.BOLD, 14));
-		txtName.setBounds(138, 25, 237, 25);
+		txtName.setBounds(452, 24, 404, 25);
 		txtName.setColumns(10);
 		panelChildAdd.add(txtName);
 		
 		JLabel lblAddName = new JLabel("Name");
 		lblAddName.setBackground(new Color(164, 195, 162));
-		lblAddName.setBounds(48, 25, 61, 25);
+		lblAddName.setBounds(311, 24, 112, 25);
 		lblAddName.setOpaque(true);
 		lblAddName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddName.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -416,7 +417,7 @@ public class home {
 		lblAddSection.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddSection.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddSection.setBackground(new Color(164, 195, 162));
-		lblAddSection.setBounds(48, 74, 112, 25);
+		lblAddSection.setBounds(311, 74, 112, 25);
 		panelChildAdd.add(lblAddSection);
 		
 		JLabel lblAddNotes = new JLabel("Notes");
@@ -424,16 +425,16 @@ public class home {
 		lblAddNotes.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddNotes.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddNotes.setBackground(new Color(164, 195, 162));
-		lblAddNotes.setBounds(48, 121, 61, 25);
+		lblAddNotes.setBounds(311, 121, 112, 25);
 		panelChildAdd.add(lblAddNotes);
 		
 		txtNotes = new JTextArea();
 		txtNotes.setFont(new Font("Tahoma", Font.BOLD, 14));
-		txtNotes.setBounds(119, 123, 309, 94);
+		txtNotes.setBounds(452, 123, 404, 120);
 		panelChildAdd.add(txtNotes);
 		
 		cbSectionSelect = new JComboBox();
-		cbSectionSelect.setBounds(171, 73, 204, 25);
+		cbSectionSelect.setBounds(452, 73, 404, 25);
 		panelChildAdd.add(cbSectionSelect);
 		
 		JLabel lblAddAuthor = new JLabel("Author");
@@ -441,11 +442,11 @@ public class home {
 		lblAddAuthor.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddAuthor.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddAuthor.setBackground(new Color(164, 195, 162));
-		lblAddAuthor.setBounds(48, 252, 112, 25);
+		lblAddAuthor.setBounds(311, 252, 112, 25);
 		panelChildAdd.add(lblAddAuthor);
 		
 		cbAuthorSelect = new JComboBox();
-		cbAuthorSelect.setBounds(171, 255, 204, 25);
+		cbAuthorSelect.setBounds(452, 255, 404, 25);
 		panelChildAdd.add(cbAuthorSelect);
 		
 		JLabel lblAddManager = new JLabel("Manager");
@@ -453,11 +454,11 @@ public class home {
 		lblAddManager.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddManager.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddManager.setBackground(new Color(164, 195, 162));
-		lblAddManager.setBounds(48, 312, 112, 25);
+		lblAddManager.setBounds(311, 312, 112, 25);
 		panelChildAdd.add(lblAddManager);
 		
 		cbManagerSelect = new JComboBox();
-		cbManagerSelect.setBounds(171, 315, 204, 25);
+		cbManagerSelect.setBounds(452, 315, 404, 25);
 		panelChildAdd.add(cbManagerSelect);
 		
 		JLabel lblEnglishName = new JLabel("English name");
@@ -465,13 +466,13 @@ public class home {
 		lblEnglishName.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEnglishName.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblEnglishName.setBackground(new Color(164, 195, 162));
-		lblEnglishName.setBounds(48, 374, 112, 25);
+		lblEnglishName.setBounds(311, 374, 112, 25);
 		panelChildAdd.add(lblEnglishName);
 		
 		txtName_en = new JTextField();
 		txtName_en.setFont(new Font("Tahoma", Font.BOLD, 14));
 		txtName_en.setColumns(10);
-		txtName_en.setBounds(191, 374, 237, 25);
+		txtName_en.setBounds(452, 374, 404, 25);
 		panelChildAdd.add(txtName_en);
 		
 		JLabel lblAddLanguage = new JLabel("Language");
@@ -479,11 +480,11 @@ public class home {
 		lblAddLanguage.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAddLanguage.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblAddLanguage.setBackground(new Color(164, 195, 162));
-		lblAddLanguage.setBounds(48, 423, 112, 25);
+		lblAddLanguage.setBounds(311, 423, 112, 25);
 		panelChildAdd.add(lblAddLanguage);
 		
 		cbLanguageSelect = new JComboBox();
-		cbLanguageSelect.setBounds(191, 426, 204, 25);
+		cbLanguageSelect.setBounds(452, 426, 404, 25);
 		panelChildAdd.add(cbLanguageSelect);
 		
 		JButton btnCancel_Add = new JButton("Cancel");
@@ -491,13 +492,13 @@ public class home {
 			public void actionPerformed(ActionEvent e) {
 				tabbedPane.remove(panelAdd);
 				tabbedPane.setSelectedComponent(panelList);
-				
+				tabbedPane.setEnabledAt(0, true);
 			}
 		});
 		btnCancel_Add.setBorder(null);
 		btnCancel_Add.setBackground(new Color(255, 255, 128));
 		btnCancel_Add.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnCancel_Add.setBounds(411, 622, 99, 29);
+		btnCancel_Add.setBounds(458, 622, 99, 29);
 		panelAdd.add(btnCancel_Add);
 		
 		JButton btnAddNew = new JButton("Add");
@@ -528,10 +529,14 @@ public class home {
 				clearForm();
 				itemsArrayList = cat.getCategoryObjects();
 				loadTable(itemsArrayList);
+				
+				tabbedPane.remove(panelAdd);
+				tabbedPane.setSelectedComponent(panelAdd);
+				tabbedPane.setEnabledAt(0, false);
 			}
 		});
 		btnAddNew.setFont(new Font("Tahoma", Font.BOLD, 15));
-		btnAddNew.setBounds(547, 622, 99, 29);
+		btnAddNew.setBounds(615, 622, 99, 29);
 		panelAdd.add(btnAddNew);
 		//đưa dữ liệu vào bảng
 		loadTable(this.itemsArrayList);
@@ -548,9 +553,10 @@ public class home {
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(tblCategoryList.getSelectedColumn() != -1) {
-//					tabbedPane.add(panelEdit, 1);
-//					tabbedPane.setTitleAt(1, "Edit category");
+					tabbedPane.add(panelEdit, 1);
+					tabbedPane.setTitleAt(1, "Edit category");
 					tabbedPane.setSelectedComponent(panelEdit);
+					tabbedPane.setEnabledAt(0, false);
 					updateData();
 					int id = -1;
 					String temp = tblCategoryList.getValueAt(tblCategoryList.getSelectedRow(), 0).toString();
@@ -595,7 +601,7 @@ public class home {
 				catObj.setCategory_notes(notes);
 				
 				Calendar c = Calendar.getInstance();
-				String lastModified = c.get(Calendar.DAY_OF_MONTH) + "/" + c.get(Calendar.MONTH) + "/" + c.get(Calendar.YEAR);
+				String lastModified = c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR);
 				catObj.setCategory_last_modified(lastModified);
 
 				int managerId = userArrayList.get(cbManagerSelect_edit.getSelectedIndex()).getUser_id();
@@ -617,6 +623,7 @@ public class home {
 				
 				tabbedPane.remove(panelEdit);
 				tabbedPane.setSelectedComponent(panelList);
+				tabbedPane.setEnabledAt(0, true);
 			}
 		});
 		
@@ -646,9 +653,10 @@ public class home {
 		
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				tabbedPane.add(panelAdd);
-//				tabbedPane.setTitleAt(2, "Add new category");
+				tabbedPane.add(panelAdd);
+				tabbedPane.setTitleAt(1, "Add new category");
 				tabbedPane.setSelectedComponent(panelAdd);
+				tabbedPane.setEnabledAt(0, false);
 				updateData();
 				updateAddSelection();
 				
@@ -794,8 +802,6 @@ public class home {
 		for (UserObject u : this.userArrayList) {
 			if (catObj.getCategory_manager_id() == u.getUser_id()) {
 				d = i;
-				System.err.println(catObj.getCategory_manager_id());
-				System.out.println(u.getUser_id());
 			}
 			managerData.addElement("<html>" + u.getUser_fullname() + "</html>");
 			i++;
