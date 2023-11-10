@@ -601,7 +601,7 @@ public class home {
 				catObj.setCategory_notes(notes);
 				
 				Calendar c = Calendar.getInstance();
-				String lastModified = c.get(Calendar.DAY_OF_MONTH) + "/" + c.get(Calendar.MONTH) + "/" + c.get(Calendar.YEAR);
+				String lastModified = c.get(Calendar.DAY_OF_MONTH) + "/" + (c.get(Calendar.MONTH)+1) + "/" + c.get(Calendar.YEAR);
 				catObj.setCategory_last_modified(lastModified);
 
 				int managerId = userArrayList.get(cbManagerSelect_edit.getSelectedIndex()).getUser_id();
@@ -802,8 +802,6 @@ public class home {
 		for (UserObject u : this.userArrayList) {
 			if (catObj.getCategory_manager_id() == u.getUser_id()) {
 				d = i;
-				System.err.println(catObj.getCategory_manager_id());
-				System.out.println(u.getUser_id());
 			}
 			managerData.addElement("<html>" + u.getUser_fullname() + "</html>");
 			i++;
